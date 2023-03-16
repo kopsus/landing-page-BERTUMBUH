@@ -1,13 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply font-poppins box-border;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Home */
+@layer components {
+  .hamburger-mobile {
+    @apply flex flex-col fixed gap-10 bg-darkGreen text-white h-[95vh] w-1/2 mt-14 p-5 duration-300 md:mt-20 text-center z-50;
+  }
+
+  .hamburger {
+    @apply px-14 bg-white shadow-lg z-50;
+  }
+
+  .btn-lihat-selengkapnya {
+    @apply bg-darkGreen text-lg text-white w-[65%] py-2 px-1 rounded-lg lg:text-xl lg:w-1/2;
+  }
+
+  .my-swipper {
+    @apply lg:hidden;
+  }
+
+  .parent-option {
+    @apply flex flex-col my-10;
+  }
+
+  .option {
+    @apply bg-white outline-none rounded-md cursor-pointer shadow-navbar flex-1 px-3 py-2 font-bold text-lg my-3;
+  }
+
+  .child-option {
+    @apply text-[12px] font-medium;
+  }
+
+  .label {
+    @apply font-bold text-xl text-white;
+  }
+
+  .icon-sosmed {
+    @apply md:w-7 md:h-7;
+  }
 }
